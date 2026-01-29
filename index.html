@@ -3,161 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="StepStyle Shoes - Premium footwear for every occasion">
-    <title>StepStyle Shoes | Home</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Shoes Store | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Header -->
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <a href="index.html" aria-label="StepStyle Shoes Home">
-                    <h1>StepStyle<span>Shoes</span></h1>
-                </a>
-            </div>
-            
-            <nav class="main-nav" aria-label="Main Navigation">
-                <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
-                    <span class="hamburger"></span>
-                </button>
-                <ul class="nav-list">
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#" id="cart-link" class="cart-icon">Cart (<span id="cart-count">0</span>)</a></li>
-                </ul>
-            </nav>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Shoes Store</a>
+            <button class="menu-toggle">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#" class="cart-link">Cart (<span class="cart-count">0</span>)</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero" aria-label="Hero Section">
-            <div class="hero-content">
-                <h2>Step Into Style</h2>
-                <p>Discover premium footwear crafted for comfort and elegance</p>
-                <a href="products.html" class="btn btn-primary">Shop Now</a>
-            </div>
-        </section>
-
-        <!-- Featured Products -->
-        <section class="featured-products" aria-label="Featured Products">
-            <div class="container">
-                <h2>Featured Collection</h2>
-                <div class="products-grid">
-                    <!-- Product cards will be dynamically loaded via JavaScript -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Categories -->
-        <section class="categories" aria-label="Product Categories">
-            <div class="container">
-                <h2>Shop by Category</h2>
-                <div class="categories-grid">
-                    <article class="category-card">
-                        <img src="https://via.placeholder.com/400x300/4A5568/FFFFFF?text=RUNNING" alt="Running shoes with modern design">
-                        <h3>Running</h3>
-                        <p>Performance footwear for athletes</p>
-                    </article>
-                    <article class="category-card">
-                        <img src="https://via.placeholder.com/400x300/2D3748/FFFFFF?text=CASUAL" alt="Casual shoes for everyday wear">
-                        <h3>Casual</h3>
-                        <p>Comfortable shoes for daily use</p>
-                    </article>
-                    <article class="category-card">
-                        <img src="https://via.placeholder.com/400x300/1A202C/FFFFFF?text=FORMAL" alt="Formal leather shoes">
-                        <h3>Formal</h3>
-                        <p>Elegant shoes for special occasions</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
-        <section class="testimonials" aria-label="Customer Testimonials">
-            <div class="container">
-                <h2>What Our Customers Say</h2>
-                <div class="testimonial-grid">
-                    <blockquote class="testimonial">
-                        <p>"The most comfortable shoes I've ever owned!"</p>
-                        <cite>- Alex Johnson</cite>
-                    </blockquote>
-                    <blockquote class="testimonial">
-                        <p>"Excellent quality and fast delivery."</p>
-                        <cite>- Sarah Miller</cite>
-                    </blockquote>
-                    <blockquote class="testimonial">
-                        <p>"Perfect fit and great customer service."</p>
-                        <cite>- Michael Chen</cite>
-                    </blockquote>
-                </div>
-            </div>
-        </section>
+    <!-- Full Background Hero -->
+    <main class="hero">
+        <div class="hero-overlay">
+            <h1>Welcome to Shoes Store</h1>
+            <p>Find the perfect shoes for every occasion</p>
+            <a href="products.html" class="btn">Shop Now</a>
+        </div>
     </main>
 
+    <!-- Featured Products -->
+    <section class="featured">
+        <h2>Featured Shoes</h2>
+        <div class="products-grid">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>StepStyle Shoes</h3>
-                    <p>Quality footwear since 2010</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <address>
-                        <p>123 Shoe Street</p>
-                        <p>Footwear City, FC 10001</p>
-                        <p>Email: info@stepstyle.com</p>
-                        <p>Phone: (555) 123-4567</p>
-                    </address>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shoes Store</h3>
+                <p>Quality footwear for everyone</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 StepStyle Shoes. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Email: info@shoesstore.com</p>
+                <p>Phone: 0911 11 11 11</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shoes Store. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Cart Modal (Hidden by default) -->
-    <div id="cart-modal" class="modal" role="dialog" aria-label="Shopping Cart" aria-hidden="true">
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Your Cart</h2>
-                <button class="close-modal" aria-label="Close cart">&times;</button>
+                <h3>Your Cart</h3>
+                <button class="close-modal">&times;</button>
             </div>
             <div class="modal-body">
-                <div id="cart-items">
-                    <!-- Cart items will be dynamically loaded -->
-                    <p class="empty-cart">Your cart is empty</p>
+                <div class="cart-items">
+                    <!-- Cart items here -->
                 </div>
                 <div class="cart-total">
-                    <p>Total: $<span id="cart-total">0.00</span></p>
+                    <p>Total: <span>0</span> Birr</p>
                 </div>
-                <button id="checkout-btn" class="btn btn-primary">Proceed to Checkout</button>
+                <button class="btn checkout-btn">Checkout</button>
             </div>
         </div>
     </div>
 
-    <script src="js/main.js"></script>
-    <script src="js/cart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
