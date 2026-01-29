@@ -3,21 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>to do list that uses local storage</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CineRate | Home</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>To-Do List</h1>
+<header>
+    <h1>CineRate</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+    </nav>
+</header>
 
-    <input type="text" id="todoInput" placeholder="Add a task...">
-    <button id="addBtn">Add</button>
+<main>
+    <section class="movies">
+        <article class="movie-card">
+            <img src="images/poster-placeholder.jpg" alt="Movie Poster">
+            <h3>Inception</h3>
+            <p>Genre: Sci-Fi</p>
+            <button onclick="openMovie('Inception')">View Details</button>
+        </article>
 
-    <ul id="todoList"></ul>
-</div>
+        <article class="movie-card">
+            <img src="images/poster-placeholder.jpg" alt="Movie Poster">
+            <h3>Interstellar</h3>
+            <p>Genre: Sci-Fi</p>
+            <button onclick="openMovie('Interstellar')">View Details</button>
+        </article>
+    </section>
+</main>
 
-<script src="script.js"></script>
+<footer>
+    <p>&copy; 2026 CineRate</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
-
