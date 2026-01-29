@@ -3,39 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineRate | Home</title>
+    <title>CineCritic | Reviews</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <h1>CineRate</h1>
+    <h1>CineCritic</h1>
     <nav>
-        <a href="index.html">Home</a>
+        <a href="landing.html">Home</a>
+        <a href="index.html">Reviews</a>
         <a href="about.html">About</a>
     </nav>
 </header>
 
-<main>
-    <section class="movies">
-        <article class="movie-card">
-            <img src="images/poster-placeholder.jpg" alt="Movie Poster">
-            <h3>Inception</h3>
-            <p>Genre: Sci-Fi</p>
-            <button onclick="openMovie('Inception')">View Details</button>
-        </article>
+<main class="reviews">
 
-        <article class="movie-card">
-            <img src="images/poster-placeholder.jpg" alt="Movie Poster">
-            <h3>Interstellar</h3>
-            <p>Genre: Sci-Fi</p>
-            <button onclick="openMovie('Interstellar')">View Details</button>
-        </article>
-    </section>
+    <article class="review-preview">
+        <img src="images/inception.jpg" alt="Inception poster">
+        <div>
+            <h2>Inception</h2>
+            <p class="rating">★★★★☆</p>
+            <p>
+                A visually dazzling science fiction film that explores
+                dreams within dreams while questioning reality.
+            </p>
+            <a href="#" onclick="openMovie('Inception')">Read Full Review →</a>
+        </div>
+    </article>
+
+    <article class="review-preview">
+        <img src="images/interstellar.jpg" alt="Interstellar poster">
+        <div>
+            <h2>Interstellar</h2>
+            <p class="rating">★★★★★</p>
+            <p>
+                An emotional and ambitious journey through space,
+                time, and human connection.
+            </p>
+            <a href="#" onclick="openMovie('Interstellar')">Read Full Review →</a>
+        </div>
+    </article>
+
 </main>
 
 <footer>
-    <p>&copy; 2026 CineRate</p>
+    <p>&copy; 2026 CineCritic</p>
 </footer>
 
 <script src="js/script.js"></script>
