@@ -3,54 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineCritic | Reviews</title>
+    <meta name="description" content="StepStyle Shoes - Premium footwear for every occasion">
+    <title>StepStyle Shoes | Home</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header>
-    <h1>CineCritic</h1>
-    <nav>
-        <a href="landing.html">Home</a>
-        <a href="index.html">Reviews</a>
-        <a href="about.html">About</a>
-    </nav>
-</header>
-
-<main class="reviews">
-
-    <article class="review-preview">
-        <img src="images/inception.jpg" alt="Inception poster">
-        <div>
-            <h2>Inception</h2>
-            <p class="rating">★★★★☆</p>
-            <p>
-                A visually dazzling science fiction film that explores
-                dreams within dreams while questioning reality.
-            </p>
-            <a href="#" onclick="openMovie('Inception')">Read Full Review →</a>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html" aria-label="StepStyle Shoes Home">
+                    <h1>StepStyle<span>Shoes</span></h1>
+                </a>
+            </div>
+            
+            <nav class="main-nav" aria-label="Main Navigation">
+                <button class="menu-toggle" aria-expanded="false" aria-label="Toggle menu">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" id="cart-link" class="cart-icon">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
         </div>
-    </article>
+    </header>
 
-    <article class="review-preview">
-        <img src="images/interstellar.jpg" alt="Interstellar poster">
-        <div>
-            <h2>Interstellar</h2>
-            <p class="rating">★★★★★</p>
-            <p>
-                An emotional and ambitious journey through space,
-                time, and human connection.
-            </p>
-            <a href="#" onclick="openMovie('Interstellar')">Read Full Review →</a>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Hero Section">
+            <div class="hero-content">
+                <h2>Step Into Style</h2>
+                <p>Discover premium footwear crafted for comfort and elegance</p>
+                <a href="products.html" class="btn btn-primary">Shop Now</a>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products" aria-label="Featured Products">
+            <div class="container">
+                <h2>Featured Collection</h2>
+                <div class="products-grid">
+                    <!-- Product cards will be dynamically loaded via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories" aria-label="Product Categories">
+            <div class="container">
+                <h2>Shop by Category</h2>
+                <div class="categories-grid">
+                    <article class="category-card">
+                        <img src="https://via.placeholder.com/400x300/4A5568/FFFFFF?text=RUNNING" alt="Running shoes with modern design">
+                        <h3>Running</h3>
+                        <p>Performance footwear for athletes</p>
+                    </article>
+                    <article class="category-card">
+                        <img src="https://via.placeholder.com/400x300/2D3748/FFFFFF?text=CASUAL" alt="Casual shoes for everyday wear">
+                        <h3>Casual</h3>
+                        <p>Comfortable shoes for daily use</p>
+                    </article>
+                    <article class="category-card">
+                        <img src="https://via.placeholder.com/400x300/1A202C/FFFFFF?text=FORMAL" alt="Formal leather shoes">
+                        <h3>Formal</h3>
+                        <p>Elegant shoes for special occasions</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials" aria-label="Customer Testimonials">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="testimonial-grid">
+                    <blockquote class="testimonial">
+                        <p>"The most comfortable shoes I've ever owned!"</p>
+                        <cite>- Alex Johnson</cite>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Excellent quality and fast delivery."</p>
+                        <cite>- Sarah Miller</cite>
+                    </blockquote>
+                    <blockquote class="testimonial">
+                        <p>"Perfect fit and great customer service."</p>
+                        <cite>- Michael Chen</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>StepStyle Shoes</h3>
+                    <p>Quality footwear since 2010</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <address>
+                        <p>123 Shoe Street</p>
+                        <p>Footwear City, FC 10001</p>
+                        <p>Email: info@stepstyle.com</p>
+                        <p>Phone: (555) 123-4567</p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 StepStyle Shoes. All rights reserved.</p>
+            </div>
         </div>
-    </article>
+    </footer>
 
-</main>
+    <!-- Cart Modal (Hidden by default) -->
+    <div id="cart-modal" class="modal" role="dialog" aria-label="Shopping Cart" aria-hidden="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Your Cart</h2>
+                <button class="close-modal" aria-label="Close cart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically loaded -->
+                    <p class="empty-cart">Your cart is empty</p>
+                </div>
+                <div class="cart-total">
+                    <p>Total: $<span id="cart-total">0.00</span></p>
+                </div>
+                <button id="checkout-btn" class="btn btn-primary">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
 
-<footer>
-    <p>&copy; 2026 CineCritic</p>
-</footer>
-
-<script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>
