@@ -1,4 +1,3 @@
-// Product Data
 const products = [
     {
         id: 1,
@@ -44,10 +43,8 @@ const products = [
     }
 ];
 
-// Cart
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// Update cart count
 function updateCartCount() {
     const count = cart.reduce((total, item) => total + item.quantity, 0);
     document.querySelectorAll('.cart-count').forEach(span => {
@@ -55,12 +52,10 @@ function updateCartCount() {
     });
 }
 
-// Save cart to localStorage
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Add to cart
 function addToCart(productId) {
     const product = products.find(p => p.id === productId);
     if (!product) return;
@@ -81,7 +76,6 @@ function addToCart(productId) {
     alert(`${product.name} added to cart!`);
 }
 
-// Remove from cart
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
     saveCart();
@@ -89,7 +83,6 @@ function removeFromCart(productId) {
     showCart();
 }
 
-// Show cart modal
 function showCart() {
     const modal = document.getElementById('cartModal');
     const cartItems = document.querySelector('.cart-items');
@@ -123,13 +116,11 @@ function showCart() {
     if (modal) modal.style.display = 'flex';
 }
 
-// Close modal
 function closeModal() {
     const modal = document.getElementById('cartModal');
     if (modal) modal.style.display = 'none';
 }
 
-// Load featured products on home page
 function loadFeaturedProducts() {
     const grid = document.querySelector('.products-grid');
     if (!grid) return;
@@ -146,7 +137,6 @@ function loadFeaturedProducts() {
     `).join('');
 }
 
-// Load all products on products page
 function loadAllProducts() {
     const container = document.querySelector('.products-container');
     if (!container) return;
@@ -163,7 +153,6 @@ function loadAllProducts() {
     `).join('');
 }
 
-// Filter products
 function setupFilters() {
     const categoryFilter = document.getElementById('categoryFilter');
     const sortFilter = document.getElementById('sortFilter');
@@ -183,19 +172,16 @@ function filterProducts() {
     
     let filtered = [...products];
     
-    // Filter by category
     if (category && category !== 'all') {
         filtered = filtered.filter(p => p.category === category);
     }
     
-    // Sort
     if (sort === 'price-low') {
         filtered.sort((a, b) => a.price - b.price);
     } else if (sort === 'price-high') {
         filtered.sort((a, b) => b.price - a.price);
     }
     
-    // Update display
     const container = document.querySelector('.products-container');
     if (container) {
         container.innerHTML = filtered.map(product => `
@@ -211,7 +197,6 @@ function filterProducts() {
     }
 }
 
-// Contact form
 function setupContactForm() {
     const form = document.getElementById('contactForm');
     const successMsg = document.getElementById('successMsg');
@@ -220,7 +205,6 @@ function setupContactForm() {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Simple validation
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
@@ -230,11 +214,9 @@ function setupContactForm() {
                 return;
             }
             
-            // Show success message
             form.style.display = 'none';
             successMsg.style.display = 'block';
             
-            // Reset form after 5 seconds
             setTimeout(() => {
                 form.reset();
                 form.style.display = 'block';
@@ -244,7 +226,6 @@ function setupContactForm() {
     }
 }
 
-// Mobile menu toggle
 function setupMobileMenu() {
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.nav-menu');
@@ -256,7 +237,6 @@ function setupMobileMenu() {
     }
 }
 
-// Event Listeners
 document.addEventListener('DOMContentLoaded', function() {
     updateCartCount();
     
@@ -294,4 +274,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile menu
     setupMobileMenu();
+
 });
